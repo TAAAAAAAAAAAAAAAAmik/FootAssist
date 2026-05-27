@@ -1,16 +1,69 @@
-# React + Vite
+# FootAssist
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FootAssist — цифровая платформа для школьного футбола: паспорт игрока, рейтинг, прогресс, состав, травмы, турнир, чат и QR-доступ для зрителей.
 
-Currently, two official plugins are available:
+## Идея
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+В школьном футболе игроков часто оценивают "на глаз", турнирные таблицы ведут вручную, а прогресс ученика быстро теряется между матчами. FootAssist собирает ключевые данные в одном приложении, чтобы игрок видел развитие, тренер принимал решения по фактам, а организатор вел турнир прозрачнее.
 
-## React Compiler
+## Роли
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Игрок: личный паспорт, статистика, рекомендации, расписание, история прогресса, чат.
+- Тренер: команда, заявки, редактирование статистики, автосостав, травмы, рейтинг, чат.
+- Организатор: заявки команд, турнирная таблица, подтверждение данных, AI-демо, безопасность.
+- Зритель: турнир, матчи, MVP, рейтинг игроков и QR-доступ.
+- Жюри: короткий маршрут демонстрации проекта за 60 секунд.
 
-## Expanding the ESLint configuration
+## Что уже работает
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React/Vite веб-приложение.
+- Ролевой интерфейс для игрока, тренера, организатора и зрителя.
+- Цифровой паспорт игрока и расчет рейтинга.
+- Рекомендации и диаграмма навыков.
+- Заявки игроков и команд.
+- Турнирная таблица, матчи и MVP.
+- Мониторинг травм и автоподбор состава.
+- Чат тренера и игрока.
+- Реальный QR-код на демо-ссылку.
+- Сохранение демо-данных в браузере.
+- Режим жюри для быстрой защиты проекта.
+- Раздел тестирования с планом пилота и метриками.
+- HTML-паспорт игрока для красивого скачиваемого отчета.
+- Android-обвязка через Capacitor.
+
+## Статус AI Video Analysis
+
+AI Video Analysis в текущей версии является демонстрационным сценарием будущей функции. Прототип показывает логику: загрузка видео, предварительный отчет, проверка организатором и добавление подтвержденных данных в рейтинг. Реального автоматического распознавания видео в этой версии нет.
+
+## Демо
+
+Веб-демо: https://taaaaaaaaaaaaaaaamik.github.io/FootAssist/
+
+## Запуск
+
+```bash
+npm install
+npm run dev
+```
+
+## Сборка
+
+```bash
+npm run build
+```
+
+Сборка публикуется в папку `docs`, чтобы проект можно было открыть через GitHub Pages.
+
+## Проверка
+
+```bash
+npm run lint
+```
+
+## Планы развития
+
+- Реальные аккаунты и база данных.
+- PDF-отчеты игрока и команды.
+- История сезонов.
+- Более точные права доступа.
+- Настоящий видеоанализ на компьютерном зрении после пилотного тестирования.
